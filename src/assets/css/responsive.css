@@ -1,0 +1,11 @@
+@media (min-width: 740px) and (max-width: 1112px) {
+  .container {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 1112px) {
+  .my-skills__skills {
+    margin-top: 50px;
+  }
+}
