@@ -900,6 +900,7 @@
   width: 100%;
   height: 270px;
   object-fit: cover;
+  object-position: top;
 }
 
 .section-blog__post-item .section-blog__post-wrapper {
