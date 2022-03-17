@@ -5,66 +5,84 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
   <title>Document</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <script src="https://kit.fontawesome.com/aa78b5a4eb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="/src/assets/css/base.css">
   <link rel="stylesheet" href="/src/assets/css/grid.css">
-  <link rel="stylesheet" href="/src/assets/css/responsive.css">
   <link rel="stylesheet" href="/src/assets/css/animation.css">
   <link rel="stylesheet" href="/src/assets/css/common.css">
   <link rel="stylesheet" href="/src/assets/css/main.css">
+  <link rel="stylesheet" href="/src/assets/css/responsive.css">
 </head>
 
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <div class="container">
-      <div class="header__content">
-        <a href="#" class="header__logo">Azey</a>
-        <nav class="navbar">
-          <ul class="list-none">
-            <li>
-              <a href="#home">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#services">
-                Services
-              </a>
-            </li>
-            <li>
-              <a href="#resume">
-                Resume
-              </a>
-            </li>
-            <li>
-              <a href="#portfolio">
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a href="#blog">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <div class="row">
+        <div class="col c-12">
+          <div class="header__content">
+            <a href="#" class="logo-link">Azey</a>
+            <div class="header__menu">
+              <input type="checkbox" id="mobile-menu-toggler" />
+              <div class="menu__toggler">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+              <nav class="navbar" id="navbar">
+                <a href="#" class="logo-link">Azey</a>
+                <ul class="list-none">
+                  <li>
+                    <a href="#home" data-js-hash="#home">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about" data-js-hash="#about">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" data-js-hash="#services">
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#resume" data-js-hash="#resume">
+                      Resume
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#portfolio" data-js-hash="#portfolio">
+                      Portfolio
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#blog" data-js-hash="#blog">
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" data-js-hash="#contact">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="menu__overlay"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -87,7 +105,7 @@
                   Hire me
                 </button>
               </div>
-              <a href="" class="section-home__discover-link">
+              <a href="#about" class="section-home__discover-link">
                 <div class="chevron-double">
                   <i class="fa-solid fa-chevron-left"></i>
                   <i class="fa-solid fa-chevron-left"></i>
@@ -188,61 +206,63 @@
             </h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col c-12 m-6 l-3">
-            <div class="section-services__service">
-              <div class="service__icon">
-                <i class="fa-solid fa-pen-ruler"></i>
+        <div class="section-services__list">
+          <div class="row">
+            <div class="col c-12 m-6 l-3">
+              <div class="section-services__service">
+                <div class="service__icon">
+                  <i class="fa-solid fa-pen-ruler"></i>
+                </div>
+                <h3 class="service__heading">
+                  CREATIVE DESIGN
+                </h3>
+                <p class="service__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
+                <div class="label-item service__desc-index">01.</div>
+                </p>
               </div>
-              <h3 class="service__heading">
-                CREATIVE DESIGN
-              </h3>
-              <p class="service__desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
-              <div class="label-item service__desc-index">01.</div>
-              </p>
             </div>
-          </div>
-          <div class="col c-12 m-6 l-3">
-            <div class="section-services__service">
-              <div class="service__icon">
-                <i class="fa-solid fa-flag"></i>
+            <div class="col c-12 m-6 l-3">
+              <div class="section-services__service">
+                <div class="service__icon">
+                  <i class="fa-solid fa-flag"></i>
+                </div>
+                <h3 class="service__heading">
+                  BRANDING
+                </h3>
+                <p class="service__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
+                <div class="label-item service__desc-index">02.</div>
+                </p>
               </div>
-              <h3 class="service__heading">
-                BRANDING
-              </h3>
-              <p class="service__desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
-              <div class="label-item service__desc-index">02.</div>
-              </p>
             </div>
-          </div>
-          <div class="col c-12 m-6 l-3">
-            <div class="section-services__service">
-              <div class="service__icon">
-                <i class="fa-solid fa-code"></i>
+            <div class="col c-12 m-6 l-3">
+              <div class="section-services__service">
+                <div class="service__icon">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="service__heading">
+                  CLEAN CODE
+                </h3>
+                <p class="service__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
+                <div class="label-item service__desc-index">03.</div>
+                </p>
               </div>
-              <h3 class="service__heading">
-                CLEAN CODE
-              </h3>
-              <p class="service__desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
-              <div class="label-item service__desc-index">03.</div>
-              </p>
             </div>
-          </div>
-          <div class="col c-12 m-6 l-3">
-            <div class="section-services__service">
-              <div class="service__icon">
-                <i class="fa-solid fa-headset"></i>
+            <div class="col c-12 m-6 l-3">
+              <div class="section-services__service">
+                <div class="service__icon">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3 class="service__heading">
+                  FAST SUPPORT
+                </h3>
+                <p class="service__desc">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
+                <div class="label-item service__desc-index">04.</div>
+                </p>
               </div>
-              <h3 class="service__heading">
-                FAST SUPPORT
-              </h3>
-              <p class="service__desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusm.
-              <div class="label-item service__desc-index">04.</div>
-              </p>
             </div>
           </div>
         </div>
@@ -264,8 +284,8 @@
               <div class="edu-and-job__milestone-wrapper">
                 <div class="edu-and-job__milestone">
                   <h3 class="milestone__heading">
-                    <div class="milestone__period">
-                      <div class="milestone__period-icon-wrapper">
+                    <div class="badge">
+                      <div class="badge__icon-wrapper">
                         <i class="fa-solid fa-graduation-cap"></i>
                       </div>
                       2007 - 2011
@@ -282,8 +302,8 @@
                 <div class="edu-and-job__milestone-connector"></div>
                 <div class="edu-and-job__milestone">
                   <h3 class="milestone__heading">
-                    <div class="milestone__period">
-                      <div class="milestone__period-icon-wrapper">
+                    <div class="badge">
+                      <div class="badge__icon-wrapper">
                         <i class="fa-solid fa-graduation-cap"></i>
                       </div>
                       2007 - 2011
@@ -303,8 +323,8 @@
               <div class="edu-and-job__milestone-wrapper">
                 <div class="edu-and-job__milestone">
                   <h3 class="milestone__heading">
-                    <div class="milestone__period">
-                      <div class="milestone__period-icon-wrapper">
+                    <div class="badge">
+                      <div class="badge__icon-wrapper">
                         <i class="fa-solid fa-graduation-cap"></i>
                       </div>
                       2007 - 2011
@@ -321,8 +341,8 @@
                 <div class="edu-and-job__milestone-connector"></div>
                 <div class="edu-and-job__milestone">
                   <h3 class="milestone__heading">
-                    <div class="milestone__period">
-                      <div class="milestone__period-icon-wrapper">
+                    <div class="badge">
+                      <div class="badge__icon-wrapper">
                         <i class="fa-solid fa-graduation-cap"></i>
                       </div>
                       2007 - 2011
@@ -349,7 +369,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col m-12 l-5">
+            <div class="col c-12 m-5">
               <div class="my-skills__desc">
                 <h4 class="my-skills__desc-heading">Some About My Abilities</h4>
                 <p class="my-skills__desc-detail">
@@ -363,7 +383,7 @@
                 </button>
               </div>
             </div>
-            <div class="col m-12 l-7">
+            <div class="col c-12 m-7">
               <div class="my-skills__skills">
                 <div class="tab-container">
                   <div class="tabs">
@@ -452,92 +472,586 @@
       </div>
     </section>
     <section id="portfolio" class="section section-portfolio">
+      <div class="section-portfolio__project">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h2 class="section-heading">
+                MY PORTFOLIO
+                <div class="section-indexing">
+                  04.
+                </div>
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col w-full">
+              <div class="project__filter">
+                <button type="button" class="filter__criteria active" data-filter="all">
+                  All
+                </button>
+                <button type="button" class="filter__criteria" data-filter=".web-design">
+                  Web design
+                </button>
+                <button type="button" class="filter__criteria" data-filter=".graphic-design">
+                  Graphic Design
+                </button>
+                <button type="button" class="filter__criteria" data-filter=".branding">
+                  Branding
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col w-full">
+              <ul class="project__list">
+                <li class="mix web-design project__item" data-order="1">
+                  <img src="/src/assets/images/pf-1.jpg" alt="" class="project__image" />
+                  <div class="project__image-overlay">
+                    <h3 class="project__title">Project title</h3>
+                    <div class="project__type">Web design</div>
+                  </div>
+                </li>
+                <li class="mix graphic-design project__item" data-order="2">
+                  <img src="/src/assets/images/pf-2.jpg" alt="" class="project__image" />
+                  <div class="project__image-overlay">
+                    <h3 class="project__title">Project title</h3>
+                    <div class="project__type">Graphic design</div>
+                  </div>
+                </li>
+                <li class="mix branding project__item" data-order="3">
+                  <img src="/src/assets/images/pf-3.jpg" alt="" class="project__image" />
+                  <div class="project__image-overlay">
+                    <h3 class="project__title">Project title</h3>
+                    <div class="project__type">Branding</div>
+                  </div>
+                </li>
+                <li class="mix web-design project__item" data-order="4">
+                  <img src="/src/assets/images/pf-4.jpg" alt="" class="project__image" />
+                  <div class="project__image-overlay">
+                    <h3 class="project__title">Project title</h3>
+                    <div class="project__type">Web design</div>
+                  </div>
+                </li>
+                <li class="mix graphic-design project__item" data-order="5">
+                  <img src="/src/assets/images/pf-5.jpg" alt="" class="project__image" />
+                  <div class="project__image-overlay">
+                    <h3 class="project__title">Project title</h3>
+                    <div class="project__type">Graphic design</div>
+                  </div>
+                </li>
+                <li class="mix branding project__item" data-order="6">
+                  <img src="/src/assets/images/pf-6.jpg" alt="" class="project__image" />
+                  <div class="project__image-overlay">
+                    <h3 class="project__title">Project title</h3>
+                    <div class="project__type">Branding</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-portfolio__achieve-statistic"
+        style="background-image: url(https://hasnaanajmi.com/env/Anwar/images/facts.jpg);">
+        <div class="container">
+          <div class="achieve-statistic__list">
+            <div class="row">
+              <div class="col c-12 m-6 l-3">
+                <div class="achieve-statistic__item">
+                  <h3 class="badge achieve-statistic__item-heading">
+                    <div class="badge__icon-wrapper">
+                      <i class="fa-solid fa-code"></i>
+                    </div>
+                    Project done
+                  </h3>
+                  <div class="achieve-statistic__number">0</div>
+                </div>
+              </div>
+              <div class="col c-12 m-6 l-3">
+                <div class="achieve-statistic__item">
+                  <h3 class="badge achieve-statistic__item-heading">
+                    <div class="badge__icon-wrapper">
+                      <i class="fa-solid fa-users"></i>
+                    </div>
+                    Happy client
+                  </h3>
+                  <div class="achieve-statistic__number">0</div>
+                </div>
+              </div>
+              <div class="col c-12 m-6 l-3">
+                <div class="achieve-statistic__item">
+                  <h3 class="badge achieve-statistic__item-heading">
+                    <div class="badge__icon-wrapper">
+                      <i class="fa-solid fa-clock"></i>
+                    </div>
+                    Hours of Work
+                  </h3>
+                  <div class="achieve-statistic__number">0</div>
+                </div>
+              </div>
+              <div class="col c-12 m-6 l-3">
+                <div class="achieve-statistic__item">
+                  <h3 class="badge achieve-statistic__item-heading">
+                    <div class="badge__icon-wrapper">
+                      <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    Coffee cups
+                  </h3>
+                  <div class="achieve-statistic__number">0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-portfolio__testimonials">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h3 class="testimonials__heading">
+                TESTIMONIALS
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col c-12">
+              <div class="slider swiper">
+                <ul class="slider__list swiper-wrapper">
+                  <li class="slider__item swiper-slide" data-js-index="0">
+                    <div class="slider__item-wrapper">
+                      <div class="slider__item-quote">
+                        <div class="slider__item-quote-icon--left">
+                          <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <div class="slider__item-quote-icon--right">
+                          <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris
+                          nisi ut aliquip ex ea commodo.
+                        </p>
+                      </div>
+                      <div class="slider__item-person">
+                        <img src="https://hasnaanajmi.com/env/Anwar/images/testimonials/3.jpg" alt=""
+                          class="slider__item-person-image">
+                        <div class="slider__item-person-name">
+                          Cristina Jordan
+                        </div>
+                        <div class="slider__item-person-position">
+                          Web Developer
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider__item swiper-slide" data-js-index="1">
+                    <div class="slider__item-wrapper">
+                      <div class="slider__item-quote">
+                        <div class="slider__item-quote-icon--left">
+                          <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <div class="slider__item-quote-icon--right">
+                          <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris
+                          nisi ut aliquip ex ea commodo.
+                        </p>
+                      </div>
+                      <div class="slider__item-person">
+                        <img src="https://hasnaanajmi.com/env/Anwar/images/testimonials/3.jpg" alt=""
+                          class="slider__item-person-image">
+                        <div class="slider__item-person-name">
+                          Joe Paulian
+                        </div>
+                        <div class="slider__item-person-position">
+                          Web Developer
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider__item swiper-slide" data-js-index="2">
+                    <div class="slider__item-wrapper">
+                      <div class="slider__item-quote">
+                        <div class="slider__item-quote-icon--left">
+                          <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <div class="slider__item-quote-icon--right">
+                          <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris
+                          nisi ut aliquip ex ea commodo.
+                        </p>
+                      </div>
+                      <div class="slider__item-person">
+                        <img src="https://hasnaanajmi.com/env/Anwar/images/testimonials/3.jpg" alt=""
+                          class="slider__item-person-image">
+                        <div class="slider__item-person-name">
+                          Silvia Hatmun
+                        </div>
+                        <div class="slider__item-person-position">
+                          SEO Manager
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="slider__item swiper-slide" data-js-index="3">
+                    <div class="slider__item-wrapper">
+                      <div class="slider__item-quote">
+                        <div class="slider__item-quote-icon--left">
+                          <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <div class="slider__item-quote-icon--right">
+                          <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                          laboris
+                          nisi ut aliquip ex ea commodo.
+                        </p>
+                      </div>
+                      <div class="slider__item-person">
+                        <img src="https://hasnaanajmi.com/env/Anwar/images/testimonials/3.jpg" alt=""
+                          class="slider__item-person-image">
+                        <div class="slider__item-person-name">
+                          Alexander Smith
+                        </div>
+                        <div class="slider__item-person-position">
+                          Graphic Designer
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-blog" id="blog">
       <div class="container">
         <div class="row">
           <div class="col">
             <h2 class="section-heading">
-              MY PORTFOLIO
+              MY BLOG
               <div class="section-indexing">
-                04.
+                05.
               </div>
             </h2>
           </div>
         </div>
         <div class="row">
-          <div class="col w-full">
-            <div class="section-portfolio__filter">
-              <button type="button" class="filter__criteria active">
-                All
-              </button>
-              <button type="button" class="filter__criteria">
-                Web design
-              </button>
-              <button type="button" class="filter__criteria">
-                Graphic Design
-              </button>
-              <button type="button" class="filter__criteria">
-                Branding
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col w-full">
-            <ul class="section-portfolio__portfolio">
-              <li class="portfolio__item">
-                <img src="/src/assets/images/pf-1.jpg" alt="" class="portfolio__image" />
-                <div class="portfolio__image-overlay">
-                  <h3 class="portfolio__project-title">Project title</h3>
-                  <div class="portfolio__project-type">Web design</div>
+          <div class="col c-12">
+            <ul class="section-blog__post-list">
+              <div class="section-blog__post-item">
+                <div class="row no-gutters">
+                  <div class="col c-12 m-4 l-5">
+                    <img src="https://hasnaanajmi.com/env/Anwar/images/blog/1.jpg" alt=""
+                      class="section-blog__post-image">
+                  </div>
+                  <div class="col c-12 m-8 l-7">
+                    <div class="section-blog__post-wrapper">
+                      <div>
+                        <div class="section-blog__post-title">
+                          Post Title Goes Here
+                        </div>
+                        <div class="section-blog__post-info">
+                          <div class="section-blog__post-created-date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            10 Jan 19
+                          </div>
+                          <div class="section-blog__post-comment-count">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            2 Comment
+                          </div>
+                        </div>
+                      </div>
+                      <div class="section-blog__post-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris
+                        nisi ut...
+                      </div>
+                      <div class="section-blog__post-footer">
+                        <a href="#">
+                          Read more
+                          <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li class="portfolio__item">
-                <img src="/src/assets/images/pf-2.jpg" alt="" class="portfolio__image" />
-                <div class="portfolio__image-overlay">
-                  <h3 class="portfolio__project-title">Project title</h3>
-                  <div class="portfolio__project-type">Graphic design</div>
+              </div>
+              <div class="section-blog__post-item">
+                <div class="row no-gutters">
+                  <div class="col c-12 m-4 l-5">
+                    <img src="https://hasnaanajmi.com/env/Anwar/images/blog/1.jpg" alt=""
+                      class="section-blog__post-image">
+                  </div>
+                  <div class="col c-12 m-8 l-7">
+                    <div class="section-blog__post-wrapper">
+                      <div>
+                        <div class="section-blog__post-title">
+                          Post Title Goes Here
+                        </div>
+                        <div class="section-blog__post-info">
+                          <div class="section-blog__post-created-date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            10 Jan 19
+                          </div>
+                          <div class="section-blog__post-comment-count">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            2 Comment
+                          </div>
+                        </div>
+                      </div>
+                      <div class="section-blog__post-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut...
+                      </div>
+                      <div class="section-blog__post-footer">
+                        <a href="#">
+                          Read more
+                          <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li class="portfolio__item">
-                <img src="/src/assets/images/pf-3.jpg" alt="" class="portfolio__image" />
-                <div class="portfolio__image-overlay">
-                  <h3 class="portfolio__project-title">Project title</h3>
-                  <div class="portfolio__project-type">Branding</div>
+              </div>
+              <div class="section-blog__post-item">
+                <div class="row no-gutters">
+                  <div class="col c-12 m-4 l-5">
+                    <img src="https://hasnaanajmi.com/env/Anwar/images/blog/1.jpg" alt=""
+                      class="section-blog__post-image">
+                  </div>
+                  <div class="col c-12 m-8 l-7">
+                    <div class="section-blog__post-wrapper">
+                      <div>
+                        <div class="section-blog__post-title">
+                          Post Title Goes Here
+                        </div>
+                        <div class="section-blog__post-info">
+                          <div class="section-blog__post-created-date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            10 Jan 19
+                          </div>
+                          <div class="section-blog__post-comment-count">
+                            <i class="fa-solid fa-comment-dots"></i>
+                            2 Comment
+                          </div>
+                        </div>
+                      </div>
+                      <div class="section-blog__post-content">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                        ut...
+                      </div>
+                      <div class="section-blog__post-footer">
+                        <a href="#">
+                          Read more
+                          <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li class="portfolio__item">
-                <img src="/src/assets/images/pf-4.jpg" alt="" class="portfolio__image" />
-                <div class="portfolio__image-overlay">
-                  <h3 class="portfolio__project-title">Project title</h3>
-                  <div class="portfolio__project-type">Web design</div>
-                </div>
-              </li>
-              <li class="portfolio__item">
-                <img src="/src/assets/images/pf-5.jpg" alt="" class="portfolio__image" />
-                <div class="portfolio__image-overlay">
-                  <h3 class="portfolio__project-title">Project title</h3>
-                  <div class="portfolio__project-type">Graphic design</div>
-                </div>
-              </li>
-              <li class="portfolio__item">
-                <img src="/src/assets/images/pf-6.jpg" alt="" class="portfolio__image" />
-                <div class="portfolio__image-overlay">
-                  <h3 class="portfolio__project-title">Project title</h3>
-                  <div class="portfolio__project-type">Branding</div>
-                </div>
-              </li>
+              </div>
             </ul>
           </div>
         </div>
       </div>
     </section>
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-heading">
+              CONTACT ME
+              <div class="section-indexing">
+                06.
+              </div>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col c-12 m-4">
+            <div class="section-contact__info">
+              <div class="section-contact__info-item">
+                <div class="badge">
+                  <div class="badge__icon-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <span>
+                    Location
+                  </span>
+                </div>
+                NewYork, USA
+                <br />
+                10 Street Name
+              </div>
+              <div class="section-contact__info-item">
+                <div class="badge">
+                  <div class="badge__icon-wrapper">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <span>
+                    Email
+                  </span>
+                </div>
+                Jhonsmith@infos.com
+                <br />
+                Support@example.com
+              </div>
+              <div class="section-contact__info-item">
+                <div class="badge">
+                  <div class="badge__icon-wrapper">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <span>
+                    Phone
+                  </span>
+                </div>
+                +84 123456789
+              </div>
+              <div class="section-contact__info-item">
+                <div class="badge">
+                  <div class="badge__icon-wrapper">
+                    <i class="fa-solid fa-earth-asia"></i>
+                  </div>
+                  <span>
+                    Website
+                  </span>
+                </div>
+                www.yourdomain.com
+              </div>
+            </div>
+          </div>
+          <div class="col c-12 m-8">
+            <form action="#contact" class="section-contact__form">
+              <div class="section-contact__form-group">
+                <input type="text" class="section-contact__form-input" placeholder=" " required>
+                <label for="" class="section-contact__form-label">Name</label>
+                <div class="section-contact__form-input-border"></div>
+              </div>
+              <div class="section-contact__form-group">
+                <input type="email" class="section-contact__form-input" placeholder=" " required>
+                <label for="" class="section-contact__form-label">Email</label>
+                <div class="section-contact__form-input-border"></div>
+              </div>
+              <div class="section-contact__form-group">
+                <input type="text" class="section-contact__form-input" placeholder=" " required>
+                <label for="" class="section-contact__form-label">Subject</label>
+                <div class="section-contact__form-input-border"></div>
+              </div>
+              <div class="section-contact__form-group">
+                <input type="text" class="section-contact__form-input" placeholder=" " required>
+                <label for="" class="section-contact__form-label">Your message</label>
+                <div class="section-contact__form-input-border"></div>
+              </div>
+              <button type="submit" class="ripple-btn section-contact__form-submit">
+                Send message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer id="footer" class="footer">
+    <div class="container">
+      <a href="#" class="logo-link">Azey</a>
+      <div class="footer__social">
+        <a href="" class="footer__social-link">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="" class="footer__social-link">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="" class="footer__social-link">
+          <i class="fa-brands fa-behance"></i>
+        </a>
+        <a href="" class="footer__social-link">
+          <i class="fa-brands fa-dribbble"></i>
+        </a>
+        <a href="" class="footer__social-link">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+      <div class="footer__copyright">
+        Clone this template
+        <a href="https://hasnaanajmi.com/env/Anwar" target="_blank">HasnaaDesign</a>
+        2022
+      </div>
+    </div>
+  </footer>
 
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal-body">
+        <div class="modal-control">
+          <button type="button" class="modal__prev-btn">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button type="button" class="modal__next-btn">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <img src="" alt="" class="modal__image" />
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="scroll-top-btn hidden" id="scroll-top-btn">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+  <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+  <script type="module" src="/src/assets/js/mobile-nav.js"></script>
   <script type="module" src="/src/assets/js/text-typing-animate.js"></script>
+  <script type="module" src="/src/assets/js/header-active.js"></script>
+  <script type="module" src="/src/assets/js/observer-animate.js"></script>
   <script type="module" src="/src/assets/js/ripple-btn.js"></script>
   <script type="module" src="/src/assets/js/my-skill-progress.js"></script>
   <script type="module" src="/src/assets/js/tab.js"></script>
-  <script type="module" src="/src/assets/js/portfolio-filter.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+  <script>
+    const mixer = mixitup('.section-portfolio__project .project__list');
+  </script>
+  <script type="module" src="/src/assets/js/modal.js"></script>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      grabCursor: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      autoplay: {
+        pauseOnMouseEnter: true,
+      }
+    });
+  </script>
 </body>
 
 </html>
